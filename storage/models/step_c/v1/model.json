@@ -1,0 +1,6 @@
+{
+  "features": ["score_c"],
+  "labels": ["No", "Yes"],
+  "threshold": 4,
+  "trained_on": "practice data, first run"
+}

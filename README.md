@@ -18,7 +18,9 @@ and needs nothing installed.
 | `switch_pipeline.py` | Makes a pipeline active (the "live" change); needs an explicit database path |
 | `show_state.py` | Prints all pipelines and versions |
 | `storage/models/` | The model files, one folder per step and version |
-| `tests/` | Checks for the registry rules |
+| `changes/` | Starter change scripts for the exercise (with gaps to fill) |
+| `tests/` | Checks for the registry rules, plus a starter test for the exercise |
+| `PR_DESCRIPTION.md` | Template for the exercise pull request |
 | `EXERCISE.md` | The 30 minute exercise |
 
 ## The tables

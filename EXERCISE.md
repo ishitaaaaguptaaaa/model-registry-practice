@@ -1,7 +1,6 @@
 # Exercise: Replace step_b version 1 with version 2, then plan its retirement
 
-Time: about 30 minutes. Commands are written for PowerShell on Windows, run from the
-project folder.
+Commands are written for PowerShell on Windows, run from the project folder.
 
 The goal is to propose the change in a branch and a pull request, prove it with tests and a
 trial run on a copy of the database, and leave the main database untouched.
@@ -13,7 +12,7 @@ Starter files with marked gaps (`TODO 1` to `TODO 5`) are already in place:
 - `tests/test_change_0001.py`
 - `PR_DESCRIPTION.md`
 
-## Part 1. Starting point (5 minutes)
+## Part 1. Starting point
 
 1. Create the registry and make two predictions so there is some history.
 
@@ -30,7 +29,7 @@ Starter files with marked gaps (`TODO 1` to `TODO 5`) are already in place:
    python -m unittest discover -s tests -p "test_registry.py" -v
    ```
 
-## Part 2. Find the dependencies (5 minutes)
+## Part 2. Find the dependencies
 
 3. Create a branch for the change.
 
@@ -49,7 +48,7 @@ Starter files with marked gaps (`TODO 1` to `TODO 5`) are already in place:
    Note which pipelines use it, how many history rows point at it, where its files are, and
    which code lines name it.
 
-## Part 3. Make the change (10 minutes)
+## Part 3. Make the change
 
 5. Add the new model file in a new folder. Do not edit the v1 file.
 
@@ -82,7 +81,7 @@ Starter files with marked gaps (`TODO 1` to `TODO 5`) are already in place:
 
    Pipeline 1 must still say `[active]` and pipeline 2 `[draft]`.
 
-## Part 4. Trial run on a copy (5 minutes)
+## Part 4. Trial run on a copy
 
 10. Copy the database and try the live switch on the copy only. Save the output.
 
@@ -107,7 +106,7 @@ Starter files with marked gaps (`TODO 1` to `TODO 5`) are already in place:
 
     Copy this output into `reports/trial_run_on_copy.txt`.
 
-## Part 5. Open the pull request (5 minutes)
+## Part 5. Open the pull request
 
 11. Fill in `PR_DESCRIPTION.md` using the dependency report, the test result and the trial
     run.

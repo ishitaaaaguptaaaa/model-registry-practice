@@ -9,7 +9,7 @@ Model versions:
   step_c v1 [validated]
 Run 3 used pipeline 2 (practice-pipeline-v2)
   step_a v1 -> High
-  step_b v2 -> Alert
+  step_b v2 -> Calm
   step_c v1 -> No
 step_b v1 marked deprecated.
 Pipelines:
@@ -21,11 +21,10 @@ Model versions:
   step_b v2 [draft]
   step_c v1 [validated]
 python : Traceback (most recent call last):
-At line:7 char:3
+At line:9 char:3
 +   python -c "import registry; c=registry.connect('practice_copy/regis ...
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteExcept 
-   ion
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
   File "<string>", line 1, in <module>

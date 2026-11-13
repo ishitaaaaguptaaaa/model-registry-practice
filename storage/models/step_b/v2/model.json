@@ -1,0 +1,6 @@
+{
+  "features": ["score_b"],
+  "labels": ["Calm", "Alert"],
+  "threshold": 6,
+  "trained_on": "practice data, threshold changed from 5 to 6"
+}

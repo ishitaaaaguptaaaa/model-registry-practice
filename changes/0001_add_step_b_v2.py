@@ -39,13 +39,14 @@ def apply(conn):
     # TODO 1: register step_b version 2 as a DRAFT.
     #   Function: registry.add_version(conn, key, number, artifacts, status=..., notes=...)
     #   artifacts: {"model": f"storage/models/{KEY}/v{NEW_VERSION}/model.json"}
+    registry.add_version(conn, KEY, NEW_VERSION, {"model": f"storage/models/{KEY}/v{NEW_VERSION}/model.json"}, status="draft")
 
     # TODO 2: create pipeline 2 as a draft copy of pipeline 1, with only step_b
     #   changed to version 2.
     #   Function: registry.copy_pipeline(conn, from_number, to_number, name, replace={...})
     #   Name it "practice-pipeline-v2".
+    registry.copy_pipeline(conn, OLD_PIPELINE, NEW_PIPELINE, "practice-pipeline-v2", replace={"step_b": NEW_VERSION})
 
-    raise NotImplementedError("Fill in TODO 1 and TODO 2, then delete this line")
 
     print(f"Added {KEY} v{NEW_VERSION} (draft) and pipeline {NEW_PIPELINE} (draft).")
 

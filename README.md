@@ -21,7 +21,7 @@ and needs nothing installed.
 | `changes/` | Starter change scripts for the exercise (with gaps to fill) |
 | `tests/` | Checks for the registry rules, plus a starter test for the exercise |
 | `PR_DESCRIPTION.md` | Template for the exercise pull request |
-| `EXERCISE.md` | The 30 minute exercise |
+| `EXERCISE.md` | The exercise |
 
 ## The tables
 

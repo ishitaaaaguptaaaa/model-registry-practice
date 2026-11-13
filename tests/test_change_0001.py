@@ -50,11 +50,11 @@ class Change0001(unittest.TestCase):
         changed = {key for key in old if old[key] != new[key]}
         # TODO 4: check that `changed` is exactly {"step_b"}
         #   and that new["step_b"] is 2. Use self.assertEqual(a, b).
-        self.fail("Fill in TODO 4, then delete this line")
-
+        self.assertEqual(changed, {"step_b"})
+        self.assertEqual(new["step_b"], 2)
     def test_history_is_unchanged(self):
         # TODO 5: check that history(self.conn) equals self.history_before.
-        self.fail("Fill in TODO 5, then delete this line")
+        self.assertEqual(history(self.conn), self.history_before)
 
     def test_switch_and_rollback(self):
         registry.set_pipeline_status(self.conn, 2, "active")

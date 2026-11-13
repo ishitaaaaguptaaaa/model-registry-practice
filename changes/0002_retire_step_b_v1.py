@@ -42,7 +42,7 @@ def apply(conn):
 
     # TODO 3: mark step_b v1 as "deprecated".
     #   Function: registry.set_version_status(conn, key, number, status)
-    raise NotImplementedError("Fill in TODO 3, then delete this line")
+    registry.set_version_status(conn, KEY, VERSION, "deprecated")
 
     print(f"{KEY} v{VERSION} marked deprecated.")
 

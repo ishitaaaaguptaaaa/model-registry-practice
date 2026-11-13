@@ -1,6 +1,6 @@
 {
   "features": ["score_b"],
   "labels": ["Calm", "Alert"],
-  "threshold": 5,
-  "trained_on": "practice data, first run"
+  "threshold": 6,
+  "trained_on": "practice data, threshold changed from 5 to 6"
 }

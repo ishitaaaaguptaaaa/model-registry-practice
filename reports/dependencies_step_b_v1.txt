@@ -1,0 +1,46 @@
+﻿Dependency report for step_b v1 (status: validated)
+
+1. Pipelines that use it: 1
+   - pipeline 1 (practice-pipeline-v1) [active]
+   WARNING: used by the ACTIVE pipeline. Changing it changes live predictions.
+2. Prediction history rows pointing at it: 2
+   Deleting this version would blank these links. Retire it instead.
+3. Model files:
+   - model: storage/models/step_b/v1/model.json (found)
+4. Source lines that mention 'step_b': 36
+   - changes/0001_add_step_b_v2.py:1: """Change 0001: add step_b version 2 and a draft pipeline that uses it.
+   - changes/0001_add_step_b_v2.py:4: * add step_b v2 (status: draft), files in storage/models/step_b/v2/
+   - changes/0001_add_step_b_v2.py:5: * add pipeline 2 (status: draft), a copy of pipeline 1 with step_b -> v2
+   - changes/0001_add_step_b_v2.py:9: * step_b v1 or its files
+   - changes/0001_add_step_b_v2.py:15: Usage:  python changes/0001_add_step_b_v2.py [--db path]
+   - changes/0001_add_step_b_v2.py:26: KEY = "step_b"
+   - changes/0001_add_step_b_v2.py:39: # TODO 1: register step_b version 2 as a DRAFT.
+   - changes/0001_add_step_b_v2.py:43: # TODO 2: create pipeline 2 as a draft copy of pipeline 1, with only step_b
+   - changes/0002_retire_step_b_v1.py:1: """Change 0002: retire step_b version 1.
+   - changes/0002_retire_step_b_v1.py:8: * its files stay in storage/models/step_b/v1/ so old runs can be explained
+   - changes/0002_retire_step_b_v1.py:10: Usage:  python changes/0002_retire_step_b_v1.py --db <path>
+   - changes/0002_retire_step_b_v1.py:21: KEY = "step_b"
+   - changes/0002_retire_step_b_v1.py:27: """Pipelines that are not retired and still include step_b v1."""
+   - changes/0002_retire_step_b_v1.py:43: # TODO 3: mark step_b v1 as "deprecated".
+   - handoff/make_doc.py:194: p("The specific change practised was: introduce version 2 of the step_b model, which is a new "
+   - handoff/make_doc.py:195: "version of step_b with its decision threshold changed from 5 to 6, propose it through a "
+   - handoff/make_doc.py:228: ["ml_model", "The permanent name of one step, for example step_b", "None"],
+   - handoff/make_doc.py:268: "Each version's files live in their own folder (storage/models/step_b/v1/, v2/). The "
+   - handoff/make_doc.py:278: "drop-in replacement. For step_b, both versions use the feature score_b and the labels Calm "
+   - handoff/make_doc.py:325: "I created a branch for the change and ran the dependency report for step_b version 1. "
+   - handoff/make_doc.py:362: "nothing was deleted: pipeline 1, step_b version 1 and its files all still exist.")
+   - registry.py:197: replace = {"step_b": 2} means: use version 2 of step_b, keep everything else.
+   - seed.py:12: ("step_b", "Step B classifier"),
+   - tests/test_change_0001.py:26: change_0001 = load_change("0001_add_step_b_v2.py")
+   - tests/test_change_0001.py:27: change_0002 = load_change("0002_retire_step_b_v1.py")
+   - tests/test_change_0001.py:45: self.assertEqual(steps["step_b"]["version_number"], 1)
+   - tests/test_change_0001.py:47: def test_pipeline_2_only_changes_step_b(self):
+   - tests/test_change_0001.py:51: # TODO 4: check that `changed` is exactly {"step_b"}
+   - tests/test_change_0001.py:52: #   and that new["step_b"] is 2. Use self.assertEqual(a, b).
+   - tests/test_change_0001.py:62: self.assertEqual(steps["step_b"]["version_number"], 2)
+   - tests/test_change_0001.py:65: self.assertEqual(steps["step_b"]["version_number"], 1)
+   - tests/test_change_0001.py:80: self.assertEqual(registry.get_version(self.conn, "step_b", 1)["status"], "deprecated")
+   - tests/test_registry.py:14: STEPS = ("step_a", "step_b", "step_c")
+   - tests/test_registry.py:53: registry.delete_version(self.conn, "step_b", 1)
+   - tests/test_registry.py:56: registry.set_version_status(self.conn, "step_b", 1, "deprecated")
+   - tests/test_registry.py:59: registry.add_component(self.conn, 2, "step_b", 1)

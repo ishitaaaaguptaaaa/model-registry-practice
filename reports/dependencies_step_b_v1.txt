@@ -7,7 +7,7 @@
    Deleting this version would blank these links. Retire it instead.
 3. Model files:
    - model: storage/models/step_b/v1/model.json (found)
-4. Source lines that mention 'step_b': 36
+4. Source lines that mention 'step_b': 29
    - changes/0001_add_step_b_v2.py:1: """Change 0001: add step_b version 2 and a draft pipeline that uses it.
    - changes/0001_add_step_b_v2.py:4: * add step_b v2 (status: draft), files in storage/models/step_b/v2/
    - changes/0001_add_step_b_v2.py:5: * add pipeline 2 (status: draft), a copy of pipeline 1 with step_b -> v2
@@ -22,13 +22,6 @@
    - changes/0002_retire_step_b_v1.py:21: KEY = "step_b"
    - changes/0002_retire_step_b_v1.py:27: """Pipelines that are not retired and still include step_b v1."""
    - changes/0002_retire_step_b_v1.py:43: # TODO 3: mark step_b v1 as "deprecated".
-   - handoff/make_doc.py:194: p("The specific change practised was: introduce version 2 of the step_b model, which is a new "
-   - handoff/make_doc.py:195: "version of step_b with its decision threshold changed from 5 to 6, propose it through a "
-   - handoff/make_doc.py:228: ["ml_model", "The permanent name of one step, for example step_b", "None"],
-   - handoff/make_doc.py:268: "Each version's files live in their own folder (storage/models/step_b/v1/, v2/). The "
-   - handoff/make_doc.py:278: "drop-in replacement. For step_b, both versions use the feature score_b and the labels Calm "
-   - handoff/make_doc.py:325: "I created a branch for the change and ran the dependency report for step_b version 1. "
-   - handoff/make_doc.py:362: "nothing was deleted: pipeline 1, step_b version 1 and its files all still exist.")
    - registry.py:197: replace = {"step_b": 2} means: use version 2 of step_b, keep everything else.
    - seed.py:12: ("step_b", "Step B classifier"),
    - tests/test_change_0001.py:26: change_0001 = load_change("0001_add_step_b_v2.py")
